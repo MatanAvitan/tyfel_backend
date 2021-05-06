@@ -7,6 +7,7 @@ from flask_cors import CORS
 from consts import DB_HOST, DB_PORT
 from mongo_adapter import select_documents
 from documnets import Posts
+from small_talk import start_conversation
 
 app = Flask(__name__)
 CORS(app)
@@ -23,5 +24,9 @@ def root():
 def get_posts():
     return json.dumps(select_documents(Posts))
 
+
+@app.route("/small_talk", methods=['GET'])
+def start_meeting():
+    return start_conversation()
 
 app.run('0.0.0.0', 80, threaded=True)
