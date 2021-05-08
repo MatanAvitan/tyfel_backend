@@ -29,4 +29,5 @@ def get_posts():
 def start_meeting():
     return start_conversation()
 
-app.run('0.0.0.0', 80, threaded=True)
+
+app.run('localhost', 80, threaded=True)

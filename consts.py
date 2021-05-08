@@ -1,3 +1,3 @@
-DB_HOST = '192.168.202.127'
+DB_HOST = 'localhost'
 DB_PORT = 27017
 
